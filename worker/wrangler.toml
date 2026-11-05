@@ -1,0 +1,10 @@
+# Reference only — the Worker is configured in the Cloudflare dashboard, not by CLI.
+# Paste worker/worker.js into the dashboard editor, then add the D1 binding and secrets in Settings.
+name = "luxora-api"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# Dashboard → Worker → Settings → Bindings → D1 database
+#   Variable name: DB   → your shared bookings database
+# Dashboard → Worker → Settings → Variables and Secrets
+#   STRIPE_SECRET_KEY (Secret)   ADMIN_TOKEN (Secret, optional)   ALLOWED_ORIGIN (Text, optional)
